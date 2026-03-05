@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { products } from '../data/products';
+import { Link } from 'react-router-dom';
 
 type Params = {
   id: string;
@@ -26,6 +27,9 @@ export function ProductPage() {
               style: 'currency',
             }).format(product.price)}
           </p>
+          <Link to="/products" className="text-blue-600 hover:underline mt-4 block">
+            ← Back to Products
+          </Link>
         </>
       )}
     </div>
