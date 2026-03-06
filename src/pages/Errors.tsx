@@ -1,7 +1,7 @@
 import { useRouteError } from 'react-router-dom';
 
 export function ErrorPage() {
-  const error = useRouteError(); // return ErrorResponse = {statusText:'some status text'}
+  const error: any = useRouteError(); // return ErrorResponse = {statusText:'some status text'}
   console.log(error);
 
   return <div>{isError(error) && <p>{error.statusText}</p>}</div>;
